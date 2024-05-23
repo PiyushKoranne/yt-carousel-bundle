@@ -2,6 +2,21 @@
 
 (function() {
   console.log("Script loaded");
+
+   function getQueryParams() {
+    const params = {};
+    const queryString = window.location.search.substring(1);
+    const queryArray = queryString.split('&');
+    queryArray.forEach((param) => {
+      const [key, value] = param.split('=');
+      params[decodeURIComponent(key)] = decodeURIComponent(value);
+    });
+    return params;
+  }
+
+  const params = getQueryParams();
+
+  
   var parent = document.getElementById("shopify-section-feature-row");
   var container = document.createElement('div');
   container.id = 'carousel-container';
@@ -18,7 +33,7 @@
   parent.appendChild(container);
 
   // Fetch YouTube videos
-  fetch('https://citsapptesting.myshopify.com/apps/proxy-fetch?_data=routes/fetch-youtube-data', {
+  fetch(`https://citsapptesting.myshopify.com/apps/proxy-fetch?_data=routes/fetch-youtube-data?channel=${params.channel}`, {
     method: "POST",
     redirect: "manual",
     headers:{
