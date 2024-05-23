@@ -39,8 +39,8 @@
         var videoList = document.createElement('div');
         videoList.className = 'video-list'; // Bootstrap class for list styling
         videoList.style.display = "flex";
-        videoList.style.alignItems = "center";
-        videoList.style.justifyContent = "space-evenly";
+        videoList.style.alignItems = "stretch";
+        videoList.style.justifyContent = "start";
         videoList.style.flexWrap = "wrap";
         videoList.style.gap = "10px";
         videoList.style.marginTop = "10px";
@@ -51,11 +51,15 @@
           var videoItem = document.createElement('div');
           videoItem.className = 'video-item'; 
           videoItem.style.width = "250px";
+          videoItem.style
           videoItem.style.display = "flex";
           videoItem.style.flexDirection = "column";
           videoItem.style.boxShadow = "4px 4px 16px 3px rgba(0,0,0,0.2)";
           videoItem.style.borderBottomLeftRadius = "15px";
           videoItem.style.borderBottomRightRadius = "15px";
+          videoItem.style.background = "#f0f1f1";
+          videoItem.style.minHeight = "300px";
+          
           
           var thumbnail = document.createElement('img');
           thumbnail.src = video.thumbnail;
@@ -64,7 +68,6 @@
 
           var title = document.createElement('p');
           title.innerText = video.title;
-          title.style.background = "#f0f1f1";
           title.style.padding = "15px";
           title.style.fontSize = "15px";
           title.style.color = "#000000";
