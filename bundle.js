@@ -21,7 +21,12 @@
       "Access-Control-Allow-Origin": "*",
     }
   })
-    .then(response => response.json())
+   .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
     .then(data => {
       if (data.videos) {
         var videoList = document.createElement('div');
