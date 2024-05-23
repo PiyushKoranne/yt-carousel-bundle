@@ -15,7 +15,11 @@
   parent.appendChild(container);
 
   // Fetch YouTube videos
-  fetch('/apps/proxy-fetch')
+  fetch('https://citsapptesting.myshopify.com/apps/proxy-fetch', {
+    headers:{
+      "Access-Control-Allow-Origin": "*",
+    }
+  })
     .then(response => response.json())
     .then(data => {
       if (data.videos) {
