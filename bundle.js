@@ -6,7 +6,7 @@
   var container = document.createElement('div');
   container.id = 'carousel-container';
   container.className = 'container'; // Bootstrap class
-
+  container.style.paddingBottom = "100px";
   var header = document.createElement('h2');
   header.className = 'my-4'; // Bootstrap class for margin
   header.innerText = 'Top 5 Videos';
@@ -15,7 +15,6 @@
   document.body.appendChild(container);
 
   // Fetch YouTube videos
-  var categoryId = 'your-category-id'; // Replace with actual category ID
   fetch('https://admin.shopify.com/store/citsapptesting/apps/yt-carousel-latest/api/fetch-category-videos')
     .then(response => response.json())
     .then(data => {
