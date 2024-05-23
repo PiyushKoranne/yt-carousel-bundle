@@ -43,7 +43,7 @@
         videoList.style.alignItems = "stretch";
         videoList.style.justifyContent = "start";
         videoList.style.flexWrap = "wrap";
-        videoList.style.gap = "10px";
+        videoList.style.gap = "25px";
         videoList.style.marginTop = "10px";
         
         
@@ -51,15 +51,14 @@
         data.videos.forEach(video => {
           var videoItem = document.createElement('div');
           videoItem.className = 'video-item'; 
-          videoItem.style.width = "250px";
-          videoItem.style.gap = "25px";
+          videoItem.style.width = "275px";
           videoItem.style.display = "flex";
           videoItem.style.flexDirection = "column";
           videoItem.style.boxShadow = "4px 4px 16px 3px rgba(0,0,0,0.2)";
           videoItem.style.borderBottomLeftRadius = "15px";
           videoItem.style.borderBottomRightRadius = "15px";
           videoItem.style.background = "#f0f1f1";
-          videoItem.style.minHeight = "300px";
+          videoItem.style.minHeight = "290px";
           
           
           var thumbnail = document.createElement('img');
