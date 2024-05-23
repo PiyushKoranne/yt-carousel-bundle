@@ -21,6 +21,7 @@
     redirect: "manual",
     headers:{
       "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
     }
   })
    .then(response => {
