@@ -41,9 +41,10 @@
         videoList.className = 'video-list'; // Bootstrap class for list styling
         videoList.style.display = "flex";
         videoList.style.alignItems = "stretch";
-        videoList.style.justifyContent = "space-evenly";
+        videoList.style.justifyContent = "center";
         videoList.style.flexWrap = "wrap";
         videoList.style.marginTop = "10px";
+        videoList.style.gap = "50px";
         
         
         
