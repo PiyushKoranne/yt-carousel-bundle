@@ -44,6 +44,12 @@
 
         container.appendChild(videoList);
       } else {
+        var emptyElement = document.createElement("div");
+        emptyElement.style.display = "flex";
+        emptyElement.style.alignItems = "center";
+        emptyElement.style.justifyContent = "center";
+        emptyElement.innerHTML = "<p>No videos found</p>"
+        container.appendChild(emptyElement);
         console.error('Failed to fetch videos:', data.error);
       }
     })
