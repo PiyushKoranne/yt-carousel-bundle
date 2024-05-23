@@ -15,7 +15,7 @@
   parent.appendChild(container);
 
   // Fetch YouTube videos
-  fetch('https://citsapptesting.myshopify.com/apps/proxy-fetch
+  fetch('/apps/proxy-fetch
 ', {
     redirect: "manual",
     headers:{
