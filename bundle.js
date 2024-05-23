@@ -5,7 +5,7 @@
   var parent = document.getElementById("shopify-section-feature-row");
   var container = document.createElement('div');
   container.id = 'carousel-container';
-  container.className = 'container'; // Bootstrap class
+  container.className = 'container page-width'; // Bootstrap class
   container.style.paddingBottom = "100px";
   var header = document.createElement('h2');
   header.className = 'my-4'; // Bootstrap class for margin
