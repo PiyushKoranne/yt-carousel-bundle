@@ -2,7 +2,7 @@
 
 (function() {
   console.log("Script loaded");
-
+  var parent = document.getElementById("shopify-section-feature-row");
   var container = document.createElement('div');
   container.id = 'carousel-container';
   container.className = 'container'; // Bootstrap class
@@ -12,7 +12,7 @@
   header.innerText = 'Top 5 Videos';
 
   container.appendChild(header);
-  document.body.appendChild(container);
+  parent.appendChild(container);
 
   // Fetch YouTube videos
   fetch('https://admin.shopify.com/store/citsapptesting/apps/yt-carousel-latest/api/fetch-category-videos')
