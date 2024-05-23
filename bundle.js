@@ -59,6 +59,7 @@
           
           var thumbnail = document.createElement('img');
           thumbnail.src = video.thumbnail;
+          thumbnail.style.width = "100%";
           videoItem.appendChild(thumbnail);
 
           var title = document.createElement('p');
