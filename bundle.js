@@ -18,6 +18,7 @@
   fetch('https://citsapptesting.myshopify.com/apps/proxy-fetch', {
     redirect: "manual",
     headers:{
+      "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
     }
   })
