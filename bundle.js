@@ -28,7 +28,10 @@
     return response.json();
   })
     .then(data => {
+      console.log("data received from backend");
+      console.log(data);
       if (data.videos) {
+        console.log("videos are available");
         var videoList = document.createElement('div');
         videoList.className = 'video-list'; // Bootstrap class for list styling
 
