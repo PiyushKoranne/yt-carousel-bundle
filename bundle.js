@@ -16,7 +16,7 @@
 
   // Fetch YouTube videos
   fetch('https://citsapptesting.myshopify.com/apps/proxy-fetch', {
-    method: "post",
+    method: "POST",
     redirect: "manual",
     headers:{
       "Access-Control-Allow-Origin": "*",
