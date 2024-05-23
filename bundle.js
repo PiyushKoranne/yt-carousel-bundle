@@ -8,10 +8,11 @@
   container.className = 'container page-width'; // Bootstrap class
   container.style.paddingBottom = "100px";
   var header = document.createElement('h2');
-  header.className = 'my-4 h3'; // Bootstrap class for margin
-  header.innerText = 'Top 5 Videos';
+  header.className = 'h1'; // Bootstrap class for margin
+  header.innerText = 'What People Say About Us';
   header.style.textAlign = "center";
-  header.style.paddingY = "25px";
+  header.style.paddingTop = "25px";
+  header.style.paddingBottom = "25px";
   
   container.appendChild(header);
   parent.appendChild(container);
@@ -51,7 +52,7 @@
           var videoItem = document.createElement('div');
           videoItem.className = 'video-item'; 
           videoItem.style.width = "250px";
-          videoItem.style
+          videoItem.style.gap = "25px";
           videoItem.style.display = "flex";
           videoItem.style.flexDirection = "column";
           videoItem.style.boxShadow = "4px 4px 16px 3px rgba(0,0,0,0.2)";
