@@ -15,7 +15,7 @@
   parent.appendChild(container);
 
   // Fetch YouTube videos
-  fetch('https://admin.shopify.com/store/citsapptesting/apps/yt-carousel-latest/api/fetch-category-videos')
+  fetch('/apps/proxy-fetch')
     .then(response => response.json())
     .then(data => {
       if (data.videos) {
