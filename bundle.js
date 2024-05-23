@@ -8,9 +8,11 @@
   container.className = 'container page-width'; // Bootstrap class
   container.style.paddingBottom = "100px";
   var header = document.createElement('h2');
-  header.className = 'my-4'; // Bootstrap class for margin
+  header.className = 'my-4 h3'; // Bootstrap class for margin
   header.innerText = 'Top 5 Videos';
-
+  header.style.textAlign = "center";
+  header.style.paddingY = "25px";
+  
   container.appendChild(header);
   parent.appendChild(container);
 
@@ -36,7 +38,14 @@
         console.log("videos are available");
         var videoList = document.createElement('div');
         videoList.className = 'video-list'; // Bootstrap class for list styling
-
+        videoList.style.display = "flex";
+        videoList.style.alignItems = "center";
+        videoList.style.justifyContent = "space-evenly";
+        videoList.style.flexWrap = "wrap";
+        videoList.style.gap = "10px";
+        videoList.style.marginTop = "10px";
+        
+        
         data.videos.forEach(video => {
           var videoItem = document.createElement('div');
           videoItem.className = 'video-item'; // Bootstrap class for item styling
