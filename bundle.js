@@ -91,7 +91,10 @@
           videoItem.className = 'video-item'; 
           videoItem.style.boxShadow = "4px 4px 16px 3px rgba(0,0,0,0.2)";
           videoItem.style.borderRadius = "15px";
-          videoItem.style.background = "#F5F6FA";
+          videoItem.style.background = "#ffffff";
+          videoItem.style.display = "flex";
+          videoItem.style.flexDirection = "column";
+          
           
           var thumbnail = document.createElement('img');
           thumbnail.src = video.thumbnail;
@@ -104,8 +107,10 @@
           var title = document.createElement('p');
           title.innerText = video.title;
           title.style.padding = "15px";
+          title.style.paddingTop = "7px";
           title.style.fontSize = "15px";
           title.style.color = "#000000";
+          title.style.fontWeight = '600';
           title.style.borderBottomLeftRadius = "15px";
           title.style.borderBottomRightRadius = "15px";
           
