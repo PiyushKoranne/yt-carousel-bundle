@@ -54,12 +54,11 @@
   // Create Swiper container
   var swiperContainer = document.createElement('div');
   swiperContainer.className = 'swiper-container';
-  swiperContainer.style.overflowX = 'hidden';
-  swiperContainer.style.paddingTop = "10px";
-  swiperContainer.style.paddingBottom = "10px";
   
   var swiperWrapper = document.createElement('div');
   swiperWrapper.className = 'swiper-wrapper';
+  swiperWrapper.style.overflowX = 'hidden';
+  swiperWrapper.style.padding = "10px";
   swiperContainer.appendChild(swiperWrapper);
   container.appendChild(swiperContainer);
 
@@ -119,7 +118,7 @@
         // Initialize Swiper
         new Swiper('.swiper-container', {
           slidesPerView: 4,
-          spaceBetween: 30,
+          // spaceBetween: 30,
           loop: true,
           autoplay: {
             delay: 2000, // autoplay with a delay of 2 seconds
