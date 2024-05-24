@@ -54,6 +54,7 @@
   // Create Swiper container
   var swiperContainer = document.createElement('div');
   swiperContainer.className = 'swiper-container';
+  swiperContainer.style.overflowX = 'hidden';
   var swiperWrapper = document.createElement('div');
   swiperWrapper.className = 'swiper-wrapper';
   swiperContainer.appendChild(swiperWrapper);
@@ -114,7 +115,7 @@
 
         // Initialize Swiper
         new Swiper('.swiper-container', {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 30,
           loop: true,
           navigation: {
