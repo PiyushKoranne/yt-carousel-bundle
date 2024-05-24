@@ -110,7 +110,7 @@
           title.style.paddingTop = "7px";
           title.style.fontSize = "15px";
           title.style.color = "#000000";
-          title.style.fontWeight = '600';
+          title.style.fontWeight = '500';
           title.style.borderBottomLeftRadius = "15px";
           title.style.borderBottomRightRadius = "15px";
           
