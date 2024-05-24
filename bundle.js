@@ -85,8 +85,7 @@
           videoItem.style.display = "flex";
           videoItem.style.flexDirection = "column";
           videoItem.style.boxShadow = "4px 4px 16px 3px rgba(0,0,0,0.2)";
-          videoItem.style.borderBottomLeftRadius = "15px";
-          videoItem.style.borderBottomRightRadius = "15px";
+          videoItem.style.borderRadius = "15px";
           videoItem.style.background = "#f0f1f1";
           videoItem.style.minHeight = "290px";
           
@@ -94,6 +93,9 @@
           var thumbnail = document.createElement('img');
           thumbnail.src = video.thumbnail;
           thumbnail.style.width = "100%";
+          thumbnail.style.borderTopLeftRadius = "15px";
+          thumbnail.style.borderTopRightRadius = "15px";
+          
           videoItem.appendChild(thumbnail);
 
           var title = document.createElement('p');
