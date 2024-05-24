@@ -1,9 +1,14 @@
 
-
 (function() {
   console.log("Script loaded");
 
-   function getScriptQueryParams() {
+  const cssUrl = 'https://unpkg.com/swiper/swiper-bundle.min.css';
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = cssUrl;
+  document.head.appendChild(link);
+
+  function getScriptQueryParams() {
     const scripts = document.getElementsByTagName('script');
     let src;
     
@@ -47,6 +52,14 @@
   container.appendChild(header);
   parent.appendChild(container);
 
+  // Create Swiper container
+  var swiperContainer = document.createElement('div');
+  swiperContainer.className = 'swiper-container';
+  var swiperWrapper = document.createElement('div');
+  swiperWrapper.className = 'swiper-wrapper';
+  swiperContainer.appendChild(swiperWrapper);
+  container.appendChild(swiperContainer);
+
   // Fetch YouTube videos
   fetch(`https://citsapptesting.myshopify.com/apps/proxy-fetch?_data=routes/fetch-youtube-data&channel=${params.channel}`, {
     method: "POST",
@@ -67,18 +80,11 @@
       console.log(data);
       if (data.videos) {
         console.log("videos are available");
-        var videoList = document.createElement('div');
-        videoList.className = 'video-list'; // Bootstrap class for list styling
-        videoList.style.display = "flex";
-        videoList.style.alignItems = "stretch";
-        videoList.style.justifyContent = "center";
-        videoList.style.flexWrap = "wrap";
-        videoList.style.marginTop = "10px";
-        videoList.style.gap = "50px";
-        
-        
         
         data.videos.forEach(video => {
+          var swiperSlide = document.createElement('div');
+          swiperSlide.className = 'swiper-slide';
+          
           var videoItem = document.createElement('div');
           videoItem.className = 'video-item'; 
           videoItem.style.width = "275px";
@@ -108,10 +114,24 @@
           
           videoItem.appendChild(title);
 
-          videoList.appendChild(videoItem);
+          swiperSlide.appendChild(videoItem);
+          swiperWrapper.appendChild(swiperSlide);
         });
 
-        container.appendChild(videoList);
+        // Initialize Swiper
+        new Swiper('.swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        });
       } else {
         var emptyElement = document.createElement("div");
         emptyElement.style.display = "flex";
