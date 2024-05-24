@@ -3,19 +3,19 @@
 (function() {
   console.log("Script loaded");
 
-   function getQueryParams() {
-    const params = {};
-    const queryString = window.location.search.substring(1);
-    const queryArray = queryString.split('&');
-    queryArray.forEach((param) => {
-      const [key, value] = param.split('=');
-      params[decodeURIComponent(key)] = decodeURIComponent(value);
-    });
-    return params;
-  }
+  //  function getQueryParams() {
+  //   const params = {};
+  //   const queryString = window.location.search.substring(1);
+  //   const queryArray = queryString.split('&');
+  //   queryArray.forEach((param) => {
+  //     const [key, value] = param.split('=');
+  //     params[decodeURIComponent(key)] = decodeURIComponent(value);
+  //   });
+  //   return params;
+  // }
 
-  const params = getQueryParams();
-  console.log("Params : ",params);
+  // const params = getQueryParams();
+  console.log("Params : ", window.location.search);
   
   var parent = document.getElementById("shopify-section-feature-row");
   var container = document.createElement('div');
