@@ -1,4 +1,3 @@
-
 (function() {
   console.log("Script loaded");
 
@@ -87,14 +86,9 @@
           
           var videoItem = document.createElement('div');
           videoItem.className = 'video-item'; 
-          videoItem.style.width = "275px";
-          videoItem.style.display = "flex";
-          videoItem.style.flexDirection = "column";
           videoItem.style.boxShadow = "4px 4px 16px 3px rgba(0,0,0,0.2)";
           videoItem.style.borderRadius = "15px";
           videoItem.style.background = "#F5F6FA";
-          videoItem.style.minHeight = "290px";
-          
           
           var thumbnail = document.createElement('img');
           thumbnail.src = video.thumbnail;
@@ -120,7 +114,7 @@
 
         // Initialize Swiper
         new Swiper('.swiper-container', {
-          slidesPerView: 1,
+          slidesPerView: 4,
           spaceBetween: 10,
           loop: true,
           navigation: {
