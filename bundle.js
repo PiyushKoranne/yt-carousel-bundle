@@ -8,7 +8,7 @@
     let src;
     
     for (let i = 0; i < scripts.length; i++) {
-      if (scripts[i].src && scripts[i].src.includes('your-script-base-url')) {
+      if (scripts[i].src && scripts[i].src.includes('https://piyushkoranne.github.io/')) {
         src = scripts[i].src;
         break;
       }
