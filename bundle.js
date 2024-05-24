@@ -15,7 +15,7 @@
   }
 
   const params = getQueryParams();
-
+  console.log("Params : ",params);
   
   var parent = document.getElementById("shopify-section-feature-row");
   var container = document.createElement('div');
