@@ -86,7 +86,7 @@
           videoItem.style.flexDirection = "column";
           videoItem.style.boxShadow = "4px 4px 16px 3px rgba(0,0,0,0.2)";
           videoItem.style.borderRadius = "15px";
-          videoItem.style.background = "#f0f1f1";
+          videoItem.style.background = "#F5F6FA";
           videoItem.style.minHeight = "290px";
           
           
