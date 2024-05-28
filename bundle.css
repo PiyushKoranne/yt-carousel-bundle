@@ -41,7 +41,9 @@
     background: linear-gradient(#00000000, #000000fa) #00000000;
     padding: 2rem 1.5rem 1.5rem;
 }
-
+.position-relative{
+    position: relative;
+}
 .card-footer {
     padding: 1.5rem;
     background-color: transparent;
@@ -444,6 +446,10 @@ h5.card-title.text-white {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
+}
+
+.text-white {
+    color: #fff;
 }
 
 .card.border-0.wtab {
