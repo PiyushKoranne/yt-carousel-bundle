@@ -6,6 +6,12 @@
   link.rel = 'stylesheet';
   link.href = cssUrl;
   document.head.appendChild(link);
+  
+  const cssUrl2 = 'https://piyushkoranne.github.io/yt-carousel-bundle/bundle.css';
+  const link2 = document.createElement('link');
+  link2.rel = 'stylesheet';
+  link2.href = cssUrl2;
+  document.head.appendChild(link2);
 
   function getScriptQueryParams() {
     const scripts = document.getElementsByTagName('script');
