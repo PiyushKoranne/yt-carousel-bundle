@@ -413,7 +413,7 @@ i.pr-1 {
     width: 100%;
     display: block;
     position: relative;
-    background-image: url(https://cdn.shopify.com/s/files/1/0758/3005/products/A3_DAY_ArtPrint_1200x.jpg?v=1605692196);
+/*     background-image: url(https://cdn.shopify.com/s/files/1/0758/3005/products/A3_DAY_ArtPrint_1200x.jpg?v=1605692196); */
     background-size: cover;
     border-radius: 12px 12px 2px 2px;
     background-position: 50% 50%;
