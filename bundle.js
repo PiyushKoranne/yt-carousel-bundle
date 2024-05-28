@@ -116,7 +116,7 @@ mrAutoDiv.className = 'mr-auto';
 // Create the h5 and h6 elements
 const cardTitle = document.createElement('h5');
 cardTitle.className = 'card-title text-white';
-cardTitle.textContent = 'Youtube;
+cardTitle.textContent = 'Youtube';
 
 const cardSubtitle = document.createElement('h6');
 cardSubtitle.className = 'card-subtitle text-white';
