@@ -98,7 +98,8 @@ card.className = 'card border-0';
 // Create the position-relative text-white div
 const positionRelativeDiv = document.createElement('div');
 positionRelativeDiv.className = 'position-relative text-white';
-
+positionRelativeDiv.style.position = "relative";
+          
 // Create the card-img-overlay div with badge
 const cardImgOverlay = document.createElement('div');
 cardImgOverlay.className = 'card-img-overlay three';
@@ -124,10 +125,12 @@ mrAutoDiv.className = 'mr-auto';
 const cardTitle = document.createElement('h5');
 cardTitle.className = 'card-title text-white';
 cardTitle.textContent = 'Youtube';
+cardTitle.style.color = "white";
 
 const cardSubtitle = document.createElement('h6');
 cardSubtitle.className = 'card-subtitle text-white';
 cardSubtitle.textContent = 'Check this out';
+cardSubtitle.style.color = 'white';
 
 // Append h5 and h6 to mr-auto div
 mrAutoDiv.appendChild(cardTitle);
