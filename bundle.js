@@ -47,7 +47,6 @@
   header.style.textAlign = "center";
   header.style.paddingTop = "25px";
   header.style.paddingBottom = "25px";
-  header.style.marginTop = "60px";
   
   container.appendChild(header);
   parent.appendChild(container);
@@ -55,9 +54,6 @@
   // Create Swiper container
   var swiperContainer = document.createElement('div');
   swiperContainer.className = 'swiper-container';
-  swiperContainer.style.overflowX = 'hidden';
-  swiperContainer.style.padding = "10px";
-  
   var swiperWrapper = document.createElement('div');
   swiperWrapper.className = 'swiper-wrapper';
   swiperContainer.appendChild(swiperWrapper);
@@ -88,47 +84,139 @@
           var swiperSlide = document.createElement('div');
           swiperSlide.className = 'swiper-slide';
           
-          var videoItem = document.createElement('div');
-          videoItem.className = 'video-item'; 
-          videoItem.style.boxShadow = "4px 4px 16px 3px rgba(0,0,0,0.2)";
-          videoItem.style.borderRadius = "15px";
-          videoItem.style.background = "#ffffff";
-          videoItem.style.display = "flex";
-          videoItem.style.flexDirection = "column";
-          
-          
-          var thumbnail = document.createElement('img');
-          thumbnail.src = video.thumbnail;
-          thumbnail.style.width = "100%";
-          thumbnail.style.borderTopLeftRadius = "15px";
-          thumbnail.style.borderTopRightRadius = "15px";
-          
-          videoItem.appendChild(thumbnail);
+          // Create the main card div
+const card = document.createElement('div');
+card.className = 'card border-0';
 
-          var title = document.createElement('p');
-          title.innerText = video.title;
-          title.style.padding = "15px";
-          title.style.paddingTop = "7px";
-          title.style.fontSize = "15px";
-          title.style.color = "#000000";
-          title.style.fontWeight = '500';
-          title.style.borderBottomLeftRadius = "15px";
-          title.style.borderBottomRightRadius = "15px";
-          
-          videoItem.appendChild(title);
+// Create the position-relative text-white div
+const positionRelativeDiv = document.createElement('div');
+positionRelativeDiv.className = 'position-relative text-white';
 
-          swiperSlide.appendChild(videoItem);
+// Create the card-img-overlay div with badge
+const cardImgOverlay = document.createElement('div');
+cardImgOverlay.className = 'card-img-overlay three';
+cardImgOverlay.style.backgroundImage = `url(${video.thumbnail})`;
+const badge = document.createElement('span');
+badge.className = 'badge badge-light text-uppercase';
+badge.textContent = 'Famous';
+cardImgOverlay.appendChild(badge);
+
+// Create the card-smooth-caption div
+const cardSmoothCaption = document.createElement('div');
+cardSmoothCaption.className = 'card-smooth-caption';
+
+// Create the d-flex div inside card-smooth-caption
+const dFlexDiv = document.createElement('div');
+dFlexDiv.className = 'd-flex justify-content-between align-items-center';
+
+// Create the mr-auto div
+const mrAutoDiv = document.createElement('div');
+mrAutoDiv.className = 'mr-auto';
+
+// Create the h5 and h6 elements
+const cardTitle = document.createElement('h5');
+cardTitle.className = 'card-title text-white';
+cardTitle.textContent = 'Youtube;
+
+const cardSubtitle = document.createElement('h6');
+cardSubtitle.className = 'card-subtitle text-white';
+cardSubtitle.textContent = 'Check this out';
+
+// Append h5 and h6 to mr-auto div
+mrAutoDiv.appendChild(cardTitle);
+mrAutoDiv.appendChild(cardSubtitle);
+
+// Append mr-auto div to d-flex div
+dFlexDiv.appendChild(mrAutoDiv);
+
+// Append d-flex div to card-smooth-caption
+cardSmoothCaption.appendChild(dFlexDiv);
+
+// Append card-img-overlay and card-smooth-caption to position-relative div
+positionRelativeDiv.appendChild(cardImgOverlay);
+positionRelativeDiv.appendChild(cardSmoothCaption);
+
+// Append position-relative div to card
+card.appendChild(positionRelativeDiv);
+
+// Create the card-body div
+const cardBody = document.createElement('div');
+cardBody.className = 'card-body';
+
+// Create the card-text p element
+const cardText = document.createElement('p');
+cardText.className = 'card-text';
+cardText.textContent = video.title;
+
+// Append card-text to card-body
+cardBody.appendChild(cardText);
+
+// Append card-body to card
+card.appendChild(cardBody);
+
+// Create the card-footer div
+const cardFooter = document.createElement('div');
+cardFooter.className = 'card-footer';
+
+// Create the media div
+const media = document.createElement('div');
+media.className = 'media align-items-center';
+
+// Create the media-body div
+const mediaBody = document.createElement('div');
+mediaBody.className = 'media-body';
+
+// Create the Read More link
+const readMoreLink = document.createElement('a');
+readMoreLink.className = 'card-link text-primary read-more';
+readMoreLink.href = 'javascript://';
+readMoreLink.textContent = 'Read More';
+
+// Append Read More link to media-body
+mediaBody.appendChild(readMoreLink);
+
+// Create the footerright div
+const footerRight = document.createElement('div');
+footerRight.className = 'footerright';
+
+// Create the tnlink3 divs with icons
+const heartDiv = document.createElement('div');
+heartDiv.className = 'tnlink3';
+const heartIcon = document.createElement('i');
+heartIcon.className = 'fas fa-heart';
+heartIcon.setAttribute('aria-hidden', 'true');
+heartDiv.appendChild(heartIcon);
+
+const shareDiv = document.createElement('div');
+shareDiv.className = 'tnlink3';
+const shareIcon = document.createElement('i');
+shareIcon.className = 'fas fa-share-nodes';
+shareIcon.setAttribute('aria-hidden', 'true');
+shareDiv.appendChild(shareIcon);
+
+// Append icons to footerright
+footerRight.appendChild(heartDiv);
+footerRight.appendChild(shareDiv);
+
+// Append media-body and footerright to media
+media.appendChild(mediaBody);
+media.appendChild(footerRight);
+
+// Append media to card-footer
+cardFooter.appendChild(media);
+
+// Append card-footer to card
+card.appendChild(cardFooter);
+
+          swiperSlide.appendChild(card);
           swiperWrapper.appendChild(swiperSlide);
         });
 
         // Initialize Swiper
         new Swiper('.swiper-container', {
           slidesPerView: 4,
-          spaceBetween: 30,
+          spaceBetween: 10,
           loop: true,
-          autoplay: {
-            delay: 2000, // autoplay with a delay of 2 seconds
-          },
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
