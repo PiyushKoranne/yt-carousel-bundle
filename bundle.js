@@ -53,6 +53,7 @@
   header.style.textAlign = "center";
   header.style.paddingTop = "25px";
   header.style.paddingBottom = "25px";
+  header.style.marginTop = "50px";
   
   container.appendChild(header);
   parent.appendChild(container);
