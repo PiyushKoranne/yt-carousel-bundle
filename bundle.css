@@ -234,7 +234,6 @@ i.pr-1 {
 
 .card.border-0 {
     box-shadow: 4px 4px 16px 2px rgba(0,0,0,0.15) !important;
-    background: hsl(220deg 14% 97%) !important;
     text-align: left;
     background-color: #f7f7f7 !important;
     position: relative;
