@@ -125,12 +125,12 @@ mrAutoDiv.className = 'mr-auto';
 // Create the h5 and h6 elements
 const cardTitle = document.createElement('h5');
 cardTitle.className = 'card-title text-white';
-cardTitle.textContent = new Date(video.uploadDate);
+cardTitle.textContent = 'Youtube';
 cardTitle.style.color = "white";
 
 const cardSubtitle = document.createElement('h6');
 cardSubtitle.className = 'card-subtitle text-white';
-cardSubtitle.textContent = video.uploadDate;
+cardSubtitle.textContent = video.uploadDate + ' ago';
 cardSubtitle.style.color = 'white';
 
 // Append h5 and h6 to mr-auto div
