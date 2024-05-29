@@ -355,11 +355,7 @@ span.badge.badge-light {
     justify-content: right;
 }
 
-.card.border-0.three {
-    box-shadow: rgb(0 0 0 / 23%) 0 0.0625em 0.0625em,
-    rgb(0 0 0 / 20%) 0 0.25em 0.25em,
-    rgb(0 0 0 / 18%) 0 0.45em 1.105em -0.0625em !important;
-}
+
 
 .card.border-0.three h5.card-title {
     top: 25% !important;
