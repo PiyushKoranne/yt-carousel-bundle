@@ -61,6 +61,7 @@
   var swiperContainer = document.createElement('div');
   swiperContainer.className = 'swiper-container';
   swiperContainer.style.overflowX = 'hidden';
+  swiperContainer.style.padding = "10px 0px";
   var swiperWrapper = document.createElement('div');
   swiperWrapper.className = 'swiper-wrapper';
   swiperContainer.appendChild(swiperWrapper);
@@ -225,7 +226,7 @@ card.appendChild(cardFooter);
         // Initialize Swiper
         new Swiper('.swiper-container', {
           slidesPerView: 4,
-          spaceBetween: 10,
+          spaceBetween: 30,
           loop: true,
           navigation: {
             nextEl: '.swiper-button-next',
