@@ -181,7 +181,7 @@ mediaBody.className = 'media-body';
 const readMoreLink = document.createElement('a');
 readMoreLink.className = 'card-link text-primary read-more';
 readMoreLink.href = 'javascript://';
-readMoreLink.textContent = 'Read More';
+readMoreLink.textContent = 'Watch';
 
 // Append Read More link to media-body
 mediaBody.appendChild(readMoreLink);
