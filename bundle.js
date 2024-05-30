@@ -69,7 +69,7 @@
   container.appendChild(swiperContainer);
 
   // Fetch YouTube videos
-  fetch(`https://citsapptesting.myshopify.com/apps/proxy-fetch?_data=routes/fetch-youtube-data&channel=${params.channel}&shop=${params.store}`, {
+  fetch(`https://citsapptesting.myshopify.com/apps/proxy-fetch?_data=routes/fetch-youtube-data&channel=${params.channel}&shop=${params.store}${params.playlist ? '&playlist='+params.playlist : ''}`, {
     method: "POST",
     redirect: "manual",
     headers:{
